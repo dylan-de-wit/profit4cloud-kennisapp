@@ -1,8 +1,11 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import ExploreContainer from '../components/ExploreContainer';
 import './Profile.css';
+import { useTranslation } from 'react-i18next';
 
 const Profile: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <IonPage>
       {/*<IonHeader>*/}
@@ -14,10 +17,10 @@ const Profile: React.FC = () => {
       <IonContent fullscreen>
         <IonHeader collapse="condense">
           <IonToolbar>
-            <IonTitle size="large">Tab 3</IonTitle>
+            <IonTitle size="large">{t('Profile')}</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <ExploreContainer name="Tab 3 page" />
+        <ExploreContainer name={t('Profile')} />
       </IonContent>
     </IonPage>
   );

@@ -1,8 +1,11 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import ExploreContainer from '../components/ExploreContainer';
 import './Search.css';
+import { useTranslation } from 'react-i18next';
 
 const Search: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <IonPage>
       {/*<IonHeader>*/}
@@ -14,10 +17,10 @@ const Search: React.FC = () => {
       <IonContent fullscreen>
         <IonHeader collapse="condense">
           <IonToolbar>
-            <IonTitle size="large">Tab 2</IonTitle>
+            <IonTitle size="large">{t('Search')}</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <ExploreContainer name="Tab 2 page" />
+        <ExploreContainer name={t('Search')} />
       </IonContent>
     </IonPage>
   );
