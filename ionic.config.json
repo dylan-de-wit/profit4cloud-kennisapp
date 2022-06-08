@@ -1,0 +1,7 @@
+{
+  "name": "profit4cloud-kennisapp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
